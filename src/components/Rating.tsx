@@ -6,7 +6,6 @@ const Rating: React.FC<{ amount: number; isStar: boolean }> = ({
   isStar,
 }) => {
   const ratingNumber = makeStarArray(amount);
-  console.log(ratingNumber);
   return (
     <div className="flex flex-row">
       {ratingNumber.map((item) => {

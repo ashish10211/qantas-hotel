@@ -14,7 +14,6 @@ const Home: NextPage<{ hotels: HotelData[] }> = ({ hotels }) => {
 
 export function getStaticProps() {
   const hotel = getHotels();
-  console.log("hotel", hotel);
   return {
     props: { hotels: hotel.results },
   };

@@ -1,5 +1,4 @@
 const Star: React.FC<{ rating: number }> = ({ rating }) => {
-  console.log("rating", rating);
   const ratingWidth = (Math.round((rating / 1) * 24 * 100) / 100).toString();
   return (
     <div className="relative">
