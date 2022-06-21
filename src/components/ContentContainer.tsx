@@ -45,7 +45,7 @@ const ContentContainer: React.FC<{ hotels: HotelData[] }> = ({ hotels }) => {
               amount={hotel.property.rating.ratingValue}
               hotelAddress={hotel.property.address}
               roomType={hotel.offer.name}
-              isStar={hotel.property.rating.ratingType === "starfo"}
+              isStar={hotel.property.rating.ratingType === "star"}
               price={hotel.offer.displayPrice.amount}
               save={hotel.offer.savings?.amount}
               url={hotel.property.previewImage.url}
