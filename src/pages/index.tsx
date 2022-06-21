@@ -6,7 +6,6 @@ const Home: NextPage = () => {
   return (
     <div className="flex-col mx-5 mt-5 px-5 py-5">
       <Header />
-      <hr style={{ borderColor: "black" }} />
       <Hotels />
     </div>
   );
