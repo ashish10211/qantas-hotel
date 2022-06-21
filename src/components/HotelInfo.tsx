@@ -27,7 +27,11 @@ const HotelInfo: React.FC<HotelInfoProps> = ({
         </div>
       </div>
       {hotelAddress.map((address) => {
-        return <p className="font-light">{address}</p>;
+        return (
+          <p className="font-light" key={address}>
+            {address}
+          </p>
+        );
       })}
       <span className="font-medium mt-4 mb-11 text-red-500 underline">
         {roomType}

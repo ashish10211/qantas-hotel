@@ -1,5 +1,6 @@
 import HotelInfo from "./HotelInfo";
 import Prices from "./Prices";
+import Image from "next/image";
 
 export type HotelData = {
   hotelName: string;
@@ -30,7 +31,7 @@ const Hotel: React.FC<HotelData> = ({
   return (
     <div className="w-full flex flex-row">
       <div className="w-1/3">
-        <img src={url} width="300" height="330" />
+        <Image src={url} width="300" height="330" alt="hotel image" />
       </div>
       <div className="flex place-content-between flex-row my-5 w-full">
         <div className="flex-1">
