@@ -1,22 +1,42 @@
+import { HotelData } from "./Hotel";
 import Rating from "./Rating";
-const HotelInfo = () => {
+
+type HotelInfoProps = Pick<
+  HotelData,
+  | "hotelName"
+  | "amount"
+  | "hotelAddress"
+  | "isFreeCancellation"
+  | "roomType"
+  | "isStar"
+>;
+const HotelInfo: React.FC<HotelInfoProps> = ({
+  hotelName,
+  amount,
+  hotelAddress,
+  isFreeCancellation,
+  roomType,
+  isStar,
+}) => {
   return (
     <div className="px-5 flex flex-col">
       <div className="flex flex-row">
-        <span className="font-bold text-xl">Sample hotel data</span>
+        <span className="font-bold text-xl">{hotelName}</span>
         <div className="pl-5 flex flex-row">
-          <Rating />
-          <Rating />
-          <Rating />
-          <Rating />
-          <Rating />
+          <Rating amount={amount} isStar={isStar} />
         </div>
       </div>
-      <span className="font-light"> hotel address</span>
+      {hotelAddress.map((address) => {
+        return <p className="font-light">{address}</p>;
+      })}
       <span className="font-medium mt-4 mb-11 text-red-500 underline">
-        Room type
+        {roomType}
       </span>
-      <span className="font-medium text-green-600">Free cancellation</span>
+      {isFreeCancellation ? (
+        <span className="font-medium text-green-600">Free cancellation</span>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

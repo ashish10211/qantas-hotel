@@ -1,16 +1,32 @@
-const Rating = () => {
+import React from "react";
+import Star from "./Star";
+
+const Rating: React.FC<{ amount: number; isStar: boolean }> = ({
+  amount,
+  isStar,
+}) => {
+  const ratingNumber = makeStarArray(amount);
+  console.log(ratingNumber);
   return (
-    <div>
-      <svg id="svgelem" height="22.5" width="21.5">
-        {" "}
-        */
-        <polygon
-          points="12.5,1.25 5,22.5 23.75,7.5 1.25,7.5 20,22.5"
-          fill="yellow"
-        />
-      </svg>
+    <div className="flex flex-row">
+      {ratingNumber.map((item) => {
+        return <Star rating={item} />;
+      })}
     </div>
   );
+};
+
+const makeStarArray = (amount: number) => {
+  const array = Array(5).fill(0);
+  const lowerBoundAmount = Math.floor(amount);
+  for (let i = 0; i < lowerBoundAmount; i++) {
+    array[i] = 1;
+  }
+  const amountRemainder = amount % lowerBoundAmount;
+  if (amountRemainder !== 0) {
+    array[lowerBoundAmount] = Math.round(amountRemainder * 100) / 100;
+  }
+  return array;
 };
 
 export default Rating;
