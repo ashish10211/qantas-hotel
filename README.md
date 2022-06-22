@@ -22,20 +22,20 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 
 ## Packages installed
 
-zod : For payload schema validation
-currency-symbol-map : Change currency(String) to Symbol
-Eslint: Linting
-Tailwind CSS : Installed because wanted to try this one .
+zod : For payload schema validation<br />
+currency-symbol-map : Change currency(String) to Symbol<br />
+Eslint: Linting<br />
+Tailwind CSS : Installed because wanted to try this one .<br />
 
 ## Important
 
-Under API folder data is fetched and validated using zod
-Replace .json file to run the app with different data
+Under API folder data is fetched and validated using zod<br />
+Replace .json file to run the app with different data<br />
 
 ## Trade offs
 
-Circle rating system was not completed because of the timeframe .
-Error handling was not completed because of the time constraint
+Circle rating system was not completed because of the timeframe .<br />
+Error handling was not completed because of the time constraint<br />
 
 ## Learn More
 
