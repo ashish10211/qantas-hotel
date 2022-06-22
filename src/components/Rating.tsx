@@ -1,5 +1,6 @@
 import React from "react";
 import Star from "./Star";
+import Circle from "./Circle";
 
 const Rating: React.FC<{ amount: number; isStar: boolean }> = ({
   amount,
@@ -9,7 +10,15 @@ const Rating: React.FC<{ amount: number; isStar: boolean }> = ({
   return (
     <div className="flex flex-row">
       {ratingNumber.map((item, i) => {
-        return <Star key={i} rating={item} />;
+        return isStar ? (
+          <>
+            <Star key={i} rating={item} />
+          </>
+        ) : (
+          <>
+            <Circle key={i} rating={item} />
+          </>
+        );
       })}
     </div>
   );

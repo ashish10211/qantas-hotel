@@ -2,7 +2,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+install packages:
+
+```bash
+npm i
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -14,9 +20,22 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Packages installed
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+zod : For payload schema validation
+currency-symbol-map : Change currency(String) to Symbol
+Eslint: Linting
+Tailwind CSS : Installed because wanted to try this one .
+
+## Important
+
+Under API folder data is fetched and validated using zod
+Replace .json file to run the app with different data
+
+## Trade offs
+
+Circle rating system was not completed because of the timeframe .
+Error handling was not completed because of the time constraint
 
 ## Learn More
 
