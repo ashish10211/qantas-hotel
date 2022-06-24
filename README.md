@@ -14,6 +14,12 @@ Then, run the development server:
 npm run dev
 # or
 yarn dev
+```<br/>
+
+<br/>
+To run test cases
+```bash
+npm run test
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -26,6 +32,7 @@ zod : For payload schema validation<br />
 currency-symbol-map : Change currency(String) to Symbol<br />
 Eslint: Linting<br />
 Tailwind CSS : Installed because wanted to try this one .<br />
+Jest: For testing
 
 ## Important
 
