@@ -38,7 +38,7 @@ const ContentContainer: React.FC<{ hotels: HotelData[] }> = ({ hotels }) => {
       </div>
       {hotelDetail.map((hotel) => {
         return (
-          <div key={hotel.id}>
+          <div key={hotel.id} data-testid="data-test-hotel">
             <hr />
             <Hotel
               hotelName={hotel.property.title}
@@ -72,6 +72,7 @@ const Dropdown: React.FC<{ sortFn: (asc: boolean) => void }> = ({ sortFn }) => {
         className="bg px-1 border-4"
         name="selectList"
         id="selectList"
+        data-testid="data-test-sort-dropdown"
         onChange={(e) => {
           if (e.target.value === "low-high") {
             sortFn(true);
@@ -80,8 +81,14 @@ const Dropdown: React.FC<{ sortFn: (asc: boolean) => void }> = ({ sortFn }) => {
           }
         }}
       >
-          <option value="high-low">Price high-low</option> {" "}
-        <option value="low-high">Price low-high</option>
+         {" "}
+        <option data-testid="data-test-high-low-option" value="high-low">
+          Price high-low
+        </option>
+         {" "}
+        <option data-testid="data-test-low-high-option" value="low-high">
+          Price low-high
+        </option>
       </select>
     </div>
   );

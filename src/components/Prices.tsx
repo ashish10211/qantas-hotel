@@ -11,12 +11,18 @@ const Prices: React.FC<{
       <span className="font-light mt-12">1 night total({priceCurrency})</span>
 
       <>
-        <span className="font-bold text-5xl mb-5">
+        <span
+          data-testid="data-price-currency"
+          className="font-bold text-5xl mb-5"
+        >
           {getSymbolFromCurrency(priceCurrency)}
           {price}
         </span>
         {save && (
-          <span className="font-medium text-red-500 mb-1">
+          <span
+            data-testid="data-save-amount"
+            className="font-medium text-red-500 mb-1"
+          >
             Save {getSymbolFromCurrency(savingCurrency || "")}
             {save}
           </span>
